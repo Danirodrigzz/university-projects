@@ -2,11 +2,11 @@
 the option to delete any node selected by the user.
 
 
-Se requiere que complete el programa enviado ayer sobre árboles ABB se implemente la opción 
+Se requiere que complete el programa enviado ayer sobre Ã¡rboles ABB se implemente la opciÃ³n 
 de Borrar un nodo cualesquiera seleccionado por el usuario.
 
 
-PREPARED BY: DANIELA RODRÍGUEZ AND RAICELYS PERDOMO
+PREPARED BY: DANIELA RODRÃGUEZ AND RAICELYS PERDOMO
 GROUP No. 10
 MODIFICATIONS: 0
 DATE: 05/27/2025
@@ -14,8 +14,8 @@ SUBJECT: DATA LAB SEC A
 TEACHER: HILDREN MORALES
 
 
-ELABORADO POR: DANIELA RODRÍGUEZ Y RAICELYS PERDOMO 
-GRUPO N°10
+ELABORADO POR: DANIELA RODRÃGUEZ Y RAICELYS PERDOMO 
+GRUPO NÂ°10
 MODIFICACIONES: 0
 FECHA: 27/05/2025
 MATERIA: LABORATORIO DE DATOS SEC A
@@ -65,7 +65,7 @@ raiz->izq = insertar(raiz->izq, valor);
 } 
  
  // Function to find the node with the minimum value in a tree
-// Función para encontrar el nodo con el valor mínimo en un árbol 
+// FunciÃ³n para encontrar el nodo con el valor mÃ­nimo en un Ã¡rbol 
 NodoABB* encontrarMinimo(NodoABB* raiz) { 
     while (raiz->izq != NULL) { 
         raiz = raiz->izq; 
@@ -74,7 +74,7 @@ NodoABB* encontrarMinimo(NodoABB* raiz) {
 } 
 
  // Function to find the node with the maximum value in a tree
-// Función para encontrar el nodo con el valor máximo en un árbol 
+// FunciÃ³n para encontrar el nodo con el valor mÃ¡ximo en un Ã¡rbol 
 NodoABB* encontrarMaximo(NodoABB* raiz) { 
     while (raiz->der != NULL) { 
         raiz = raiz->der; 
@@ -83,7 +83,7 @@ NodoABB* encontrarMaximo(NodoABB* raiz) {
 } 
  
  // Function to delete a node from the tree
-// Función para eliminar un nodo del árbol 
+// FunciÃ³n para eliminar un nodo del Ã¡rbol 
 NodoABB* eliminarNodo(NodoABB* raiz, int valor, int opcion) { 
     if (raiz == NULL) return raiz; 
      
@@ -111,14 +111,14 @@ NodoABB* eliminarNodo(NodoABB* raiz, int valor, int opcion) {
         NodoABB* temp; 
         if (opcion == 1) { 
              // Replace with the lesser of the greater (minimum of the right subtree)
-            // Reemplazar con el menor de los mayores (mínimo del subárbol derecho) 
+            // Reemplazar con el menor de los mayores (mÃ­nimo del subÃ¡rbol derecho) 
             temp = encontrarMinimo(raiz->der); 
             raiz->dato = temp->dato; 
             raiz->der = eliminarNodo(raiz->der, temp->dato, opcion); 
         } else { 
         
              // Replace with the largest of the smallest (maximum of the left subtree)
-            // Reemplazar con el mayor de los menores (máximo del subárbol izquierdo) 
+            // Reemplazar con el mayor de los menores (mÃ¡ximo del subÃ¡rbol izquierdo) 
             temp = encontrarMaximo(raiz->izq); 
             raiz->dato = temp->dato; 
             raiz->izq = eliminarNodo(raiz->izq, temp->dato, opcion); 
@@ -127,7 +127,7 @@ NodoABB* eliminarNodo(NodoABB* raiz, int valor, int opcion) {
 return raiz; 
 } 
 // Function to check if a value exists in the tree
-// Función para verificar si un valor existe en el árbol 
+// FunciÃ³n para verificar si un valor existe en el Ã¡rbol 
 bool existe(NodoABB* raiz, int valor) { 
 if (raiz == NULL) return false; 
 if (raiz->dato == valor) return true; 
@@ -136,7 +136,7 @@ return existe(raiz->der, valor);
 } 
 
 // Function to calculate the height of the tree
-// Función para calcular la altura del árbol 
+// FunciÃ³n para calcular la altura del Ã¡rbol 
 int altura(NodoABB* raiz) { 
 if (raiz == NULL) return 0; 
 return 1 + max(altura(raiz->izq), altura(raiz->der)); 
@@ -144,7 +144,7 @@ return 1 + max(altura(raiz->izq), altura(raiz->der));
 
 
 //Function to display the tree vertically with the root at the top
-// Función para mostrar el árbol verticalmente con la raíz arriba 
+// FunciÃ³n para mostrar el Ã¡rbol verticalmente con la raÃ­z arriba 
 void mostrarArbolVertical(NodoABB* raiz) { 
 if (raiz == NULL) { 
 cout << "The tree is empty. / El arbol esta vacio.\n"; 
@@ -224,7 +224,7 @@ void generarArbolAleatorio(NodoABB* &raiz, int cantidad) {
     cout << "\nGenerated numbers / Numeros generados: "; 
     for (int i = 0; i < cantidad; i++) { 
                                    //Numbers between 0 and 99
-        int num = rand() % 100; // Números entre 0 y 99 
+        int num = rand() % 100; // NÃºmeros entre 0 y 99 
         cout << num << " "; 
         raiz = insertar(raiz, num); 
     } 
