@@ -9,21 +9,22 @@ at a given moment, using stacks.
 
 
 Imaginenos que un restaurante (cualquiera) tiene un total de "N" platos. Suponiendo que hay platos de 3 colores, y que alguien 
-est· lavando platos y los coloca uno sobre otro y que los mesoneros toman de los platos para servirlos. Escriba en pseudocodigo 
+est√° lavando platos y los coloca uno sobre otro y que los mesoneros toman de los platos para servirlos. Escriba en pseudocodigo 
 que muestre el proceso de lavar y de servir platos y que muestre en un momento determinado que tipo de platos hay, cuantos hay, 
-y de que color hay en un momento disponible,†usando†pilas.
+y de que color hay en un momento disponible,¬†usando¬†pilas.
 
 
-PREPARED BY: DANIELA RODRÕGUEZ AND RAICELYS PERDOMO
-GROUP No. 10MODIFICATIONS: 0
+PREPARED BY: DANIELA RODR√çGUEZ AND RAICELYS PERDOMO
+GROUP No. 10
+MODIFICATIONS: 0
 DATE: 03/17/2025
 SUBJECT: DATA LAB SEC A
 TEACHER: HILDREN MORALES
 
 
 
-ELABORADO POR: DANIELA RODRÕGUEZ Y RAICELYS PERDOMO 
-GRUPO N∞10
+ELABORADO POR: DANIELA RODR√çGUEZ Y RAICELYS PERDOMO 
+GRUPO N¬∞10
 MODIFICACIONES: 0
 FECHA: 17/03/2025
 MATERIA: LABORATORIO DE DATOS SEC A
@@ -50,14 +51,14 @@ struct Platos {
 };
 
 // Function to change the console color according to the desired color
-// FunciÛn para cambiar el color de la consola seg˙n el color deseado
+// Funci√≥n para cambiar el color de la consola seg√∫n el color deseado
 void cambiarColor(int color) {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(hConsole, color);
 }
 
 // Function to print the color and reset to the default color (white)
-// FunciÛn para imprimir el color y restablecer al color por defecto (blanco)
+// Funci√≥n para imprimir el color y restablecer al color por defecto (blanco)
 void imprimirPlatoConColor(string color) {
     if (color == "Red/Rojo" || color == "Reds/Rojos") {
     	                   //Red
@@ -79,7 +80,7 @@ void imprimirPlatoConColor(string color) {
 
 
                                   // Maximum capacity of the battery
-   const int MAX_CAPACIDAD = 10; // Capacidad m·xima de la pila
+   const int MAX_CAPACIDAD = 10; // Capacidad m√°xima de la pila
    int random_action;
 
 int main() {
@@ -87,7 +88,7 @@ int main() {
     Platos p;
     char op;
     // Initialize the seed for random numbers
-    // Inicializar la semilla de los n˙meros aleatorios
+    // Inicializar la semilla de los n√∫meros aleatorios
     srand(time(0));
     
     cout << "Welcome to the Restaurant! / Bienvenidos al Restaurante!" << endl <<endl;
@@ -97,7 +98,7 @@ int main() {
     cout << "A continuacion se nos da un vistazo de dicho flujo desde la cocina: " << endl <<endl;
     system("pause");
     // Random assignment of dishes
-    // AsignaciÛn aleatoria de platos
+    // Asignaci√≥n aleatoria de platos
     p.plato_rojo = rand() % 30 + 1;
     p.plato_azul = rand() % 30 + 1;
     p.plato_verde = rand() % 30 + 1;
@@ -105,7 +106,7 @@ int main() {
     while (true) {
     	
     	                                 // Generate a random number between 0 and 3 to decide the action
-        int random_action = rand() % 4; // Generar un n˙mero aleatorio entre 0 y 3 para decidir la acciÛn
+        int random_action = rand() % 4; // Generar un n√∫mero aleatorio entre 0 y 3 para decidir la acci√≥n
         
         if (random_action == 0 && p.plato_rojo > 0) {
         	                                 //Insert value into the stack
