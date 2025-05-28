@@ -6,7 +6,7 @@
 int main() {
     int entero;
     float flotante;
-    char cadena[100]; // TamaÒo m·ximo de la cadena
+    char cadena[100]; // Tama√±o m√°ximo de la cadena
     bool booleano;
 
     printf("Ingrese un valor: ");
